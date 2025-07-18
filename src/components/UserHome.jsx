@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {CreateDoc, ShowDocs} from "./BasicCRUD.jsx";
 import {useState} from "react";
 
@@ -26,6 +26,9 @@ function UserHome() {
             <h1>
                 Welcome!
             </h1>
+            <Link to={'/'}>
+                Log Out
+            </Link>
             <h2>
                 Your APIKey is {apiKey}
             </h2>

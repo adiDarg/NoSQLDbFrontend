@@ -24,13 +24,15 @@ function Home(){
         <div>
             <h1>Welcome!</h1>
             <button onClick={generateKey}>Generate API key</button>
-            <Link to={'/UserHome'} state={{ apiKey: key }}>
+            <br/>
+            <input onChange={(e) => setKey(e.target.value)} type="text" placeholder="Enter API key for login"/>
+            <Link to={'/UserHome'} state={{apiKey: key}}>
                 Log in with APIKey:
             </Link>
-            <input onChange={(e) => setKey(e.target.value)} type="text" placeholder="Enter API key for login" />
             {loading && <h3>Loading...</h3>}
             {(error != null) && (<h3>Error has occurred! {error}</h3>)}
         </div>
     )
 }
+
 export default Home;

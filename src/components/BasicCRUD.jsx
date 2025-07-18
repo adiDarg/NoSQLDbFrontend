@@ -92,6 +92,7 @@ function ProcessDoc(props) {
             apiKey={props.apiKey}
             onDocUpdate={props.onDocUpdate}
         />
+        <br/>
         <DeleteDocument
             id={props.doc.Id}
             collection={props.collection}
@@ -125,6 +126,7 @@ function AddValueToDoc(props){
         <div>
             <input placeholder="Enter value name" onChange={(e) => setName(e.target.value)} />
             <input placeholder="Enter value" onChange={(e) => setValue(e.target.value)} />
+            <br/>
             <button onClick={submitValue}>Add Value</button>
             {loading && <h4>Loading...</h4>}
             {error && <h4>Error has occurred! {error}</h4>}
